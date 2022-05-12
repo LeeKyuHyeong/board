@@ -5,13 +5,6 @@ public class TestVO {
 	private String id;
 	private String name;
 	
-	public TestVO() {
-		
-	}
-	public TestVO(String id, String name) {
-		this.id = id;
-		this.name = name;
-	}
 	public Long getMbrNo() {
 		return mbrNo;
 	}

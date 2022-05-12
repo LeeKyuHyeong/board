@@ -1,17 +1,25 @@
 package com.board.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.board.service.TestService;
 import com.board.vo.TestVO;
+
+
 
 @Controller
 public class HomeController {
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	@Autowired
+	TestService testService;
 	
 	@RequestMapping(value="/home")
 	public String home() {
@@ -35,21 +43,24 @@ public class HomeController {
 	@RequestMapping(value = "/test")
 	public ModelAndView test() throws Exception{
 		ModelAndView mav = new ModelAndView("test");
-		mav.addObject("name", "kh");
 		
-		List<String> testList = new ArrayList<String>();
-		testList.add("a");
-		testList.add("b");
-		testList.add("c");
-		
+		List<TestVO> testList = testService.selectTest();
+		mav.addObject("name", "규형");
 		mav.addObject("list", testList);
+		log.trace("controller trace level 테스트");
+		log.debug("controller debug level 테스트");
+		log.info("controller info level 테스트");
+		log.warn("controller warn level 테스트");
+		log.error("controller error level 테스트");
 		return mav;
 		
 	}
 	
 	@RequestMapping("/thymeleafTest")
 	public String thymeleafTest(Model model) {
-		TestVO testModel = new TestVO("kh", "이규형");
+		TestVO testModel = new TestVO();
+		testModel.setId("kh");
+		testModel.setName("규형");
 		testModel.setMbrNo(1234L);
 		model.addAttribute("testModel", testModel);
 		return "thymeleaf/thymeleafTest";

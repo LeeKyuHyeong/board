@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="../css/test.css">
 <title>test</title>
 </head>
 <body>
 	<h2>Hello! ${name}</h2>
 	<div>JSP List Test</div>
 	<c:forEach var="item" items="${list}" varStatus="idx">
-	${idx.index}, ${item} <br />
+	${idx.index}st, Hello! ${item.name} <br />
 	</c:forEach>
+	<a href="#">이동</a>
 </body>
 </html>

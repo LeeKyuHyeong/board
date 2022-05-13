@@ -5,5 +5,9 @@
 	<select id="selectTest" resultType="TestVO"> 
 		SELECT 'GOD' AS NAME
 	</select>
+	
+	<select id="selectUserList" resultType="map">
+		SELECT * FROM USERS
+	</select>
 </mapper>
 

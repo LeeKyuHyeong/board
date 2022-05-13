@@ -1,6 +1,8 @@
 package com.board.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,4 +63,26 @@ public class HomeController {
 		model.addAttribute("testModel", testModel);
 		return "thymeleaf/thymeleafTest";
 	}
+	
+	@RequestMapping(value = "/viewUser")
+	public String viewUser(Model model) {
+		List<Map<String, Object>> userList = testService.selectUserList();
+		
+		log.info(userList.get(0).toString());
+		
+		List<String> loginIdList = new ArrayList<String>();
+		
+		for(int i = 0; i < userList.size(); i++) {
+			loginIdList.add(userList.get(i).get("user_loginId").toString());
+		}
+		log.info(userList.get(0).get("user_loginId").toString());
+		log.info(userList.get(1).get("user_loginId").toString());
+		
+		model.addAttribute("loginIdList", loginIdList);
+		
+		
+		
+		return "test";
+	}
+	
 }

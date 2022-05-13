@@ -18,12 +18,6 @@ public class TestService {
 	public TestMapper mapper;
 	
 	public List<TestVO> selectTest() {
-		log.trace("service trace level 테스트");
-		log.debug("service debug level 테스트");
-		log.info("service info level 테스트");
-		log.warn("service warn level 테스트");
-		log.error("service error level 테스트");
-		
 		return mapper.selectTest();
 	}
 }

@@ -47,11 +47,7 @@ public class HomeController {
 		List<TestVO> testList = testService.selectTest();
 		mav.addObject("name", "규형");
 		mav.addObject("list", testList);
-		log.trace("controller trace level 테스트");
-		log.debug("controller debug level 테스트");
-		log.info("controller info level 테스트");
-		log.warn("controller warn level 테스트");
-		log.error("controller error level 테스트");
+		
 		return mav;
 		
 	}

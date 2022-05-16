@@ -26,6 +26,10 @@
 			</c:forEach>
 		</tr>
 	</table>
+
+	<div>
+		내가왔다!
+	</div>
 </body>
 <script type="text/javascript">
 function showUsers() {

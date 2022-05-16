@@ -79,9 +79,6 @@ public class HomeController {
 		log.info(userList.get(1).get("user_loginId").toString());
 		
 		model.addAttribute("loginIdList", loginIdList);
-		
-		
-		
 		return "test";
 	}
 	

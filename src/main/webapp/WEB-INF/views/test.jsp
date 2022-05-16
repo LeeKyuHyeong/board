@@ -39,7 +39,6 @@ function showUsers() {
 		url:"/viewUser",
 		success:(data) => {
 			console.log('조회 성공');
-			location.href = "/viewTest.jsp";
 		}
 	})	
 }

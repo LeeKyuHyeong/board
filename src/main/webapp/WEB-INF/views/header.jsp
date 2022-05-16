@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +12,16 @@
     <div class="header">
         <div class="header_top">
             <div>
-                <a><img scr="#" alt="���ΰ�"></a>
+                <a><img scr="#" alt="팀로고"></a>
             </div>
             <div>
-                <a><img src="#" alt="���ӷΰ�"></a>
+                <a><img src="#" alt="게임로고"></a>
             </div>
             <div>
-                <a class="n_login">�α���</a>
-                <a class="n_login">ȸ������</a>
-                <a class="y_login">�α׾ƿ�</a>
-                <a class="y_login">������</a>
+                <a class="n_login">로그인</a>
+                <a class="n_login">회원가입</a>
+                <a class="y_login">로그아웃</a>
+                <a class="y_login">내정보</a>
             </div>
         </div>
         <div class="header_nav"></div>

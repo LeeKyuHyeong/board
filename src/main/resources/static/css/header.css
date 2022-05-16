@@ -13,3 +13,7 @@
     width : 90%;
     height : 5vh;
 }
+
+.y_login {
+    display: none;
+}

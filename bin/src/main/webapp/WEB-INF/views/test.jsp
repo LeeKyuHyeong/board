@@ -12,7 +12,6 @@
 <title>test</title>
 </head>
 <body>
-
 	<div id=contents>
 	</div>
 	<button type="button" onclick="{showUsers()}" id="btn_user">사용자 조회</button>
@@ -27,7 +26,10 @@
 			</c:forEach>
 		</tr>
 	</table>
-	
+
+	<div>
+		내가왔다!
+	</div>
 </body>
 <script type="text/javascript">
 function showUsers() {
@@ -42,4 +44,5 @@ function showUsers() {
 }
 
 </script>
+
 </html>

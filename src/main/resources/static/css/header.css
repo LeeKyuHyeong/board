@@ -67,7 +67,14 @@ li {
     top: 14vh;
     left: 780px;
     padding-top: 20px;
+    display: none;
+}
 
+#ul_board {
+    position: absolute;
+    top: 14vh;
+    left: 960px;
+    padding-top: 20px;
     display: none;
 }
 
@@ -79,13 +86,17 @@ li {
     opacity: 0.5;
 }
 
-#ul_menu :hover>#ul_ranking {
+#ul_menu :hover>#ul_ranking{
+    display: block;
+}
+#ul_menu :hover>#ul_community{
+    display: block;
+}
+#ul_menu :hover>#ul_board{
     display: block;
 }
 
-#ul_menu :hover>#ul_community {
-    display: block;
-}
+
 
 .sel_team {
     display: none;

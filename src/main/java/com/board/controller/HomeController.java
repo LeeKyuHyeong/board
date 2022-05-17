@@ -21,6 +21,11 @@ public class HomeController {
 
 		return "index.html";
 	}
+	@RequestMapping(value = "/test")
+	public String test() {
+
+		return "test";
+	}
 
 	@RequestMapping(value = "/header")
 	public String header() {

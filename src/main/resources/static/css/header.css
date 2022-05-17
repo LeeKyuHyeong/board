@@ -1,20 +1,94 @@
 * {
-    margin : 3px auto;
+    margin: 3px auto;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
 }
 
 .header {
     background-color: aqua;
-    width : 100%;
-    height : 10vh;
-    margin : 0px 5px;
-    
+    width: 100%;
+    height: 12vh;
+    margin: 0px 5px;
 }
+
 .header_top {
-    background : lightgray;
-    width : 90%;
-    height : 5vh;
+    background: lightgray;
+    width: 90%;
+    height: 8vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.header_top img {
+    margin: 0;
+    width: 150px;
+    height: 45px;
+}
+
+.div_login {
+    position: relative;
+    top: 4vh;
+    font-size: small;
+}
+
+#ul_menu {
+    background-color: antiquewhite;
+    height: 6vh;
+    text-align: center;
+}
+
+.li_menu {
+    font-size: x-large;
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: aquamarine;
+}
+
+#ul_ranking {
+    position: absolute;
+    left: 660px;
+    top: 14vh;
+    padding-top: 20px;
+    display: none;
+}
+
+#ul_community {
+    position: absolute;
+    top: 14vh;
+    left: 780px;
+    padding-top: 20px;
+
+    display: none;
+}
+
+.li_sub {
+    padding: 8px;
+}
+
+#ul_menu :hover {
+    opacity: 0.5;
+}
+
+#ul_menu :hover>#ul_ranking {
+    display: block;
+}
+
+#ul_menu :hover>#ul_community {
+    display: block;
+}
+
+.sel_team {
+    display: none;
 }
 
 .y_login {

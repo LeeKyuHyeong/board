@@ -5,6 +5,7 @@
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/test.js"></script>
 <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
@@ -17,6 +18,7 @@
 		<input type="text" placeholder="나이입력" value="" name="age">
 		<button type="submit" id="ip">입력</button>
 	</form>
+	<footer></footer>
 </body>
 <script>
 	let dataSet = {};
@@ -34,9 +36,6 @@
 			$('#contents').html(data);
 		}
 	});
-$('#btn_header').click(function(){
-	console.log('클릭');
-	location.href="header";
-})
+
 </script>
 </html>

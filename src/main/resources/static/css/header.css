@@ -47,6 +47,7 @@ li {
 }
 
 .li_menu {
+    position: relative;
     font-size: x-large;
     display: inline-block;
     padding-left: 40px;
@@ -56,24 +57,21 @@ li {
 
 #ul_ranking {
     position: absolute;
-    left: 660px;
-    top: 14vh;
+    left: 10px;
     padding-top: 20px;
     display: none;
 }
 
 #ul_community {
     position: absolute;
-    top: 14vh;
-    left: 780px;
+    left: 20px;
     padding-top: 20px;
     display: none;
 }
 
 #ul_board {
     position: absolute;
-    top: 14vh;
-    left: 960px;
+    left: 20px;
     padding-top: 20px;
     display: none;
 }

@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="css/join.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/join.js"></script>
+
 <body>
-    회원가입
+    <div class="wrap">
+        <div class="join-form">
+            <div class="title">
+                <h2>SignUp Form</h2>
+            </div>
+            <div class="form-type">
+                <div class="chk-type"><a href="login.html">Login</a></div>
+                <div class="chk-type sel"><a href="join.html">Signup</a></div>
+            </div>
+            <form>
+                <br>                
+                <label for="loginId">희망 아이디</label>
+                <input type="text" name="loginId" placeholder="ID" value=""> <br>
+                <label for="loginPwd1">비밀번호</label>
+                <input type="password" name="loginPwd1" placeholder="Password" value=""> <br>
+                <label for="loginPwd2">비밀번호 확인</label>
+                <input type="password" name="loginPwd2" placeholder="Password" value=""> <br>
+                <label for="loginEmail">이메일</label>
+                <input type="email" name="loginEmail" placeholder="Email" value="">
+                <button type="button" id="btn_join">SignUp</button>
+            </form>
+
+        </div>
+    </div>
 </body>
+
 </html>

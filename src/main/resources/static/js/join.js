@@ -1,10 +1,10 @@
 $(function() {
     let loginId = $('input[name=loginId]');
     let alertText = $('.alert_text');
-    let loginPwd = $('input[name=loginPwd1]');
+    let loginPwd = $('input[name=loginPwd]');
 
 
-    $('#btn_join').click(function(){
+    $('#btn_login').click(function(){
         console.log(loginId.val());
         console.log(loginPwd.val());
 

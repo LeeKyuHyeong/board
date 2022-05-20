@@ -10,51 +10,17 @@
 </head>
 <body>
 	<header id = "header"></header>
-	<h1>Hello World!</h1>
-	<div id=contents>
+	<div class="wrap">
+		<div class="main_wrap">
+			<ul class="main_ul">
+				<li><a href="#">MAIN</a></li>
+				<li><a href="#">PORTPOLIO</a></li>
+				<li><a href="#">LOGIN</a></li>
+				<li><a href="#">JOIN</a></li>
+				<li><a href="#">ABOUT</a></li>
+			</ul>
+		</div>
 	</div>
-	<button id="btn_header">버튼</button>
-	<form>
-		<input type="text" placeholder="이름입력" value="" name="name">
-		<input type="text" placeholder="나이입력" value="" name="age">
-		<button type="submit" id="ip">입력</button>
-	</form>
 	<footer id = "footer"></footer>
 </body>
-<script>
-$('#header').load("/header.html");
-//$('#footer').load("/footer.html");
-
-/* fetch("header.html")
-.then(response => {
-return response.text()
-})
-.then(data => {
-$("#header").html(data);
-}); */
-fetch("footer.html")
-.then(response => {
-return response.text()
-})
-.then(data => {
-$("#footer").html(data);
-});
-
-	let dataSet = {};
-	//dataSet.name = "규형";
-	//dataSet.age = 28;
-	dataSet.name = $('input[name=name]').val();
-	dataSet.age = $('input[name=age]').val();
-	
-	$.ajax({
-		type:"POST",
-		url:"/valueTest",
-		data:dataSet,
-		success: (data) => {
-			console.log("ajax data : " + data);
-			$('#contents').html(data);
-		}
-	});
-
-</script>
 </html>

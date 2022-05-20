@@ -24,7 +24,14 @@ a {
 }
 
 .main_ul {
-	list-style-type: none;
+	list-style: none;
+}
+
+.main_ul li {
+	background-color: blue;
+	padding: 10px;
+	transform: rotate(-10deg);
+	border-radius: 10px;
 }
 
 .main_ul li:hover {
@@ -36,11 +43,4 @@ a {
 .main_ul li:hover>a {
 	transition: 0.3s;
 	color: #000;
-}
-
-.main_ul li {
-	background-color: blue;
-	padding: 20px;
-	transform: rotate(-20deg);
-	border-radius: 10px;
 }

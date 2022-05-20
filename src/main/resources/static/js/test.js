@@ -23,4 +23,8 @@ return response.text()
 .then(data => {
 $("#footer").html(data);
 });*/
+
+	$.ajax({
+			
+	})
 });

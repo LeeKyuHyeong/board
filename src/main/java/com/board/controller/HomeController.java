@@ -1,8 +1,11 @@
 package com.board.controller;
 
+import java.net.http.HttpRequest;
+
 import com.board.service.TestService;
 import com.board.vo.TestVO;
 
+import org.apache.catalina.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +45,13 @@ public class HomeController {
 		model.addAttribute("testModel", testModel);
 		return "thymeleaf/thymeleafTest";
 	}
+	@RequestMapping(value = "/login")
+	public String loginProc(
+		HttpRequest request,		
+		Session session,
+		Model model) {
+			log.info("로그인 클릭후");
 
+			return "";
+	}
 }

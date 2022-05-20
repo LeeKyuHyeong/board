@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/login.css" >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/login.js" ></script>
 <body>
-    로그인
-    <div>
-    	
+    
+    <div class="wrap">
+    	<div class="login-form">
+            <div class="title">
+                <h1>Login Form</h1>
+            </div>
+            <form>
+                <input type="hidden" name="alert_text" value="">
+                <div>
+                    <p class="alert_text"></p>
+                </div>
+                <input type="text" name="loginId" placeholder="ID." value="">
+                <input type="password" name="loginPwd" placeholder="Password" value="">
+                <button type="button" id="btn_login">Login</button>
+            </form>
+            <div class="sign_up">
+                아직 회원이 아니신가요? &nbsp;
+                <a href="join.html">SignUp Now</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

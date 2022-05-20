@@ -1,0 +1,56 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.wrap {
+    background:linear-gradient(beige, violet);
+    /* background-color: violet; */
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.login-form {
+    background-color: white;
+    width: 380px;
+    height : 60vh;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert_text {
+    color: red;
+    font-weight: 800;
+
+}
+
+input {
+    width:300px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 0.3px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    width: 300px;
+    padding: 10px;
+    margin-top: 40px;
+    border:0px;
+    border-radius: 5px;
+    background:linear-gradient(beige, violet);
+    color: #fff;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.sign_up {
+    margin-top: 50px;
+}
+.sign_up a{
+    color: violet;
+    opacity: 2;
+}

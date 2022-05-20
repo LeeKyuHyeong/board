@@ -1,7 +1,7 @@
 * {
     margin: 3px auto;
     padding: 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 a {
@@ -54,25 +54,11 @@ li {
     padding-right: 40px;
     background-color: aquamarine;
 }
-
-#ul_ranking {
+#ul_intro, #ul_ranking, #ul_community, #ul_board {
+	background-color: pink;
     position: absolute;
-    left: 10px;
-    padding-top: 20px;
-    display: none;
-}
-
-#ul_community {
-    position: absolute;
-    left: 20px;
-    padding-top: 20px;
-    display: none;
-}
-
-#ul_board {
-    position: absolute;
-    left: 20px;
-    padding-top: 20px;
+    left: 15px;
+    padding-top: 10px;
     display: none;
 }
 
@@ -80,10 +66,14 @@ li {
     padding: 8px;
 }
 
-#ul_menu :hover {
+#ul_menu :hover  {
     opacity: 0.5;
 }
 
+#ul_menu :hover>#ul_intro{
+    display: block;
+    opacity: 2;
+}
 #ul_menu :hover>#ul_ranking{
     display: block;
 }
@@ -94,12 +84,12 @@ li {
     display: block;
 }
 
-
-
 .sel_team {
     display: none;
 }
-
+.on {
+	display: block;
+}
 .y_login {
     display: none;
 }

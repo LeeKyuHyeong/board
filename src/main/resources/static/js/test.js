@@ -6,6 +6,10 @@ $(function () {
     location.href = "header.html";
   });
 
+  $('.main_ul li').click(function() {
+    console.log('클릭 : ' + this);
+  });
+
 //$('#header').load("/header.html");
 //$('#footer').load("/footer.html");
 

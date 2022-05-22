@@ -50,17 +50,16 @@
         </ul>
     </div>
     <button onclick="{location.href='index.html'}">홈화면</button>
+    <button onclick="{location.href='prac2.html'}">연습2</button>
 
 <script>
     const list = document.querySelectorAll('.list');
 
     function activeLink() {
-        list.forEach((item) =>
-            item.classList.remove('active'));
+        list.forEach((item) => item.classList.remove('active'));
         this.classList.add('active');
     }
-    list.forEach((item) =>
-    item.addEventListener('click', activeLink));
+    list.forEach((item) =>  item.addEventListener('click', activeLink));
 </script>
 </body>
 

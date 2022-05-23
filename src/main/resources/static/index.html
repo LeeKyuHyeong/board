@@ -26,8 +26,8 @@
                     <h3>Sign In</h3>
                     <input type="text" placeholder="Username">
                     <input type="password" placeholder="Password">
-                    <input type="submit" value="Loign">
-                    <a href="#" class="forgot" >Forgot Password?</a>
+                    <input type="submit" value="Login" class="btn_login">
+                    <a href="main.html" class="forgot" >Forgot Password?</a>
                 </form>
             </div>
 
@@ -38,13 +38,14 @@
                     <input type="text" placeholder="Email Address">
                     <input type="password" placeholder="Password">
                     <input type="password" placeholder="Password Check">
-                    <input type="submit" value="join">                    
+                    <input type="submit" value="join">
                 </form>
             </div>
         </div>
     </div>
 
     <script>
+
         const signinBtn = $('.signinBtn');
         const signupBtn = $('.signupBtn');
         const formBx = $('.formBx');
@@ -58,6 +59,7 @@
             formBx.removeClass('active');
             body.removeClass('active');
         })
+    
     </script>
 </body>
 </html>

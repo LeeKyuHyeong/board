@@ -26,6 +26,7 @@ public class HomeController {
 
 		return "index.html";
 	}
+
 	@RequestMapping(value = "/test")
 	public String test() {
 
@@ -36,6 +37,7 @@ public class HomeController {
 	@ResponseBody
 	public String login(HttpRequest request, HttpResponse response) {
 
+		return "main";
 	}
 
 	@RequestMapping(value = "/header")
@@ -53,13 +55,14 @@ public class HomeController {
 		model.addAttribute("testModel", testModel);
 		return "thymeleaf/thymeleafTest";
 	}
+
 	@RequestMapping(value = "/login")
 	public String loginProc(
-		HttpRequest request,		
-		Session session,
-		Model model) {
-			log.info("로그인 클릭후");
+			HttpRequest request,
+			Session session,
+			Model model) {
+		log.info("로그인 클릭후");
 
-			return "";
+		return "";
 	}
 }

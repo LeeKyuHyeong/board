@@ -23,12 +23,19 @@ $(function() {
         const pwd = $('input[name=login_pwd]');
 
         if(email.val() == '' || email.val() == undefined) {
-            alert('이메일을 입력하세요.');
+            // alert('이메일을 입력하세요.');
+            email.css({"border":"1px solid red"});
+            $('input[name=alert_login_email]').css({"display":"block", "border":0});
+            $('input[name=alert_login_email]').val('이메일을 입력해주세요');
             email.focus();
             return;
+        } else {
+            email.css({"border":"1px solid #000"});
+            $('input[name=alert_login_email]').css({"display":"none"});
+
         }
         if(pwd.val() == '' || pwd.val() == undefined) {
-            alert('비밀번호를 입력하세요.');
+            // alert('비밀번호를 입력하세요.');
             pwd.focus();
             return;
         }
@@ -40,27 +47,27 @@ $(function() {
         const pwd2 = $('input[name=join_pwd2]');
 
         if(name.val() == '' || name.val() == undefined) {
-            alert('이름을 입력하세요.');
+            // alert('이름을 입력하세요.');
             name.focus();
             return;
         }
         if(email.val() == '' || email.val() == undefined) {
-            alert('이메일을 입력하세요.');
+            // alert('이메일을 입력하세요.');
             email.focus();
             return;
         }
         if(pwd.val() == '' || pwd.val() == undefined) {
-            alert('비밀번호를 입력하세요.');
+            // alert('비밀번호를 입력하세요.');
             pwd.focus();
             return;
         }
         if(pwd2.val() == '' || pwd2.val() == undefined) {
-            alert('비밀번호확인 입력하세요.');
+            // alert('비밀번호확인 입력하세요.');
             pwd2.focus();
             return;
         }
         if(pwd.val() != pwd2.val()){
-            alert('비밀번호를 다시 한번 확인해주세요.');
+            // alert('비밀번호를 다시 한번 확인해주세요.');
             pwd.focus();
             return;
         }

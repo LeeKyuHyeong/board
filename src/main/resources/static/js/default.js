@@ -3,8 +3,20 @@ $(function() {
     $('.btn_login').click(() => {
         chkLoginForm();
 
-        console.log('클릭');
         console.log("form value : " + $('.form_login').serialize());
+
+        $.ajax({
+            url: "/login.do",
+            data: $('.form_login').serialize(),
+            dataType: 'json',
+            success: function(rs) {
+                location.href = "main.html";
+            },
+            error: function(error) {
+                console.log(error);
+            }
+
+        })
     })
     function chkLoginForm() {
         const email = $('input[name=login_email]');

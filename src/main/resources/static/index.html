@@ -7,6 +7,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/default.css" type="text/css">
+    <script type="text/javascript" src="js/default.js" ></script>
 </head>
 <body>
     <div class="container">
@@ -22,23 +23,25 @@
         </div>
         <div class="formBx">
             <div class="form signinForm">
-                <form>
+                <form class="form_login">
                     <h3>Sign In</h3>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" value="Login" class="btn_login">
+                    <input type="email" placeholder="Email" name="login_email">
+                    <input type="password" placeholder="Password" name="login_pwd">
+                    <!-- <input type="submit" value="Login" class="btn_login"> -->
+                    <button type="button" class="btn_login">Login</button>
                     <a href="main.html" class="forgot" >Forgot Password?</a>
                 </form>
             </div>
 
             <div class="form signupForm">
-                <form>
+                <form class="form_join">
                     <h3>Sign Up</h3>
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Email Address">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Password Check">
-                    <input type="submit" value="join">
+                    <input type="text" placeholder="Username" name="join_name">
+                    <input type="email" placeholder="Email Address" name="join_email">
+                    <input type="password" placeholder="Password" name="join_pwd">
+                    <input type="password" placeholder="Password Check" name="join_pwd2">
+                    <!-- <input type="submit" value="join"> -->
+                    <button type="button" class="btn_join">Join</button>
                 </form>
             </div>
         </div>

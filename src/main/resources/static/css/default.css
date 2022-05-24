@@ -136,24 +136,51 @@ body.active {
     border-radius: 4px;
 }
 
-.formBx .form form input[type='submit'] {
+/* .formBx .form form input[type='submit'] {
     background: #03a9f4;
     border: none;
     color: #fff;
     max-width: 100px;
     cursor: pointer;
     border-radius: 5px;
-}
-.formBx .form form input[type='submit']:hover {
+} */
+.formBx .form form button {
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    min-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+} 
+/* .btn_login {
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    min-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+.btn_login:hover {
     transition: .5s;
     transform: translateX(20px);    
 }
-.formBx.active .signupForm input[type='submit'] {
+/* .formBx .form form input[type='submit']:hover {
+    transition: .5s;
+    transform: translateX(20px);    
+} */
+.formBx.active .signupForm button {
     background: #f43648;
     border-radius: 5px;
 }
+/* .formBx.active .signupForm input[type='submit'] {
+    background: #f43648;
+    border-radius: 5px;
+} */
 
 .formBx .form form .forgot {
+    margin-top: 5px;
     color: #f43648;
     text-decoration: none;
 }

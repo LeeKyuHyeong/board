@@ -1,6 +1,7 @@
 package com.board.controller;
 
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import com.board.service.TestService;
 import com.board.vo.TestVO;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
@@ -28,6 +30,12 @@ public class HomeController {
 	public String test() {
 
 		return "test";
+	}
+
+	@RequestMapping("/login")
+	@ResponseBody
+	public String login(HttpRequest request, HttpResponse response) {
+
 	}
 
 	@RequestMapping(value = "/header")

@@ -1,22 +1,25 @@
 $(function () {
+
   $(".btn_login").click(() => {
     chkLoginForm();
 
     console.log("form value : " + $(".form_login").serialize());
 
     $.ajax({
-      url: "/login.do",
+      url: "/login",
+      type:"POST",
       data: $(".form_login").serialize(),
-      dataType: "json",
+      //dataType: "json",
       async: "false",
       success: function (data) {
-          location.href="index2.html";
+          $('.alert_form').html(data.userName);
+          //location.href="index2.html";
       },
       error: function (error) {
         console.log(error);
       },
     });
-  });
+  })
 
   function chkLoginForm() {
     const email = $("input[name=login_email]");
@@ -91,5 +94,5 @@ $(function () {
 
     console.log("클릭");
     console.log("form value : " + $(".form_join").serialize());
-  });
+  })
 });

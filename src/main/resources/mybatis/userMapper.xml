@@ -14,9 +14,10 @@
 				A.user_type,				
 				A.USE_YN
 		FROM	KH_USER A
-		  AND 	A.user_id = #{userId}
+		WHERE 1=1
+		  AND 	A.user_loginid = #{userLoginId}
 	  	<if test="password != null and password != '' ">
-           	AND	A.user_loginpwd=#{password}
+        	AND	A.user_loginpwd=#{userLoginPwd}
         </if> 
 	</select>
 	

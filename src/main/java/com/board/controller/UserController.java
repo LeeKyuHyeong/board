@@ -3,6 +3,7 @@ package com.board.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,7 +14,6 @@ import com.board.vo.UserVO;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
-    @Autowired
+    // @Autowired
+    // UserService userService;
+    @Resource(name ="userService")
     UserService userService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -36,14 +38,20 @@ public class UserController {
             HttpServletRequest request,
             HttpServletResponse response,
             HttpSession session) throws Exception {
-
+                log.info("로그인메서드");
+                log.info("loginId : " + loginId);
+                log.info("loginPwd : " + loginPwd);
         try {
-            
-            Map<String, Object> param = new HashMap<>();
-            param.put("userEmail", loginId);
+            //넘길 파라미터 값 담기
+            Map<String, Object> param = new HashMap<String, Object>();
 
+            param.put("userLoginId", loginId);
+            log.info(param.get("userLoginId").toString());
+            
             // 패스워드 암호화 SHA512Hash.getDigest("1234")
-            param.put("password", SHA512Hash.getDigest(loginPwd));
+            //param.put("password", SHA512Hash.getDigest(loginPwd));
+            param.put("userLoginPwd", loginPwd);
+            log.info(param.get("userLoginPwd").toString());
 
             UserVO userInfo = userService.selectUserInfo(param);
 
@@ -60,7 +68,7 @@ public class UserController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "main.html";
+        return "thymeleaf/main";
     }
 
     /**

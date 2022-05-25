@@ -23,6 +23,17 @@ public class HomeController {
 		return "index.html";
 	}
 
+	@RequestMapping("/main2")
+	public String main2(
+			String id,
+			String name,
+			Model model
+		) {
+		model.addAttribute("id", id);
+		model.addAttribute("name", name);
+		return "thymeleaf/main2";
+	}
+
 	@RequestMapping("/thymeleafTest")
 	public String thymeleafTest(Model model) {
 		TestVO testModel = new TestVO();

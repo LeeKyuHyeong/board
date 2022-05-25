@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/default.css" type="text/css">
     <script type="text/javascript" src="js/default.js" ></script>
@@ -22,11 +23,15 @@
             </div>
         </div>
         <div class="formBx">
+            <h2 class="alert_form"></h2>
             <div class="form signinForm">
                 <form class="form_login">
                     <h3>Sign In</h3>
-                    <input type="email" placeholder="Email" name="login_email">
-                    <input type="text" name="alert_login_email">
+                    <!-- <label for="login_email" class="alert_login_email"></label>
+                    <input type="email" placeholder="Email" name="login_email"> -->
+                    <label for="login_id" class="alert_login_id"></label>
+                    <input type="text" placeholder="ID" name="login_id">
+                    <label for="login_pwd" class="alert_login_pwd"></label>
                     <input type="password" placeholder="Password" name="login_pwd">
                     <!-- <input type="submit" value="Login" class="btn_login"> -->
                     <button type="button" class="btn_login">Login</button>

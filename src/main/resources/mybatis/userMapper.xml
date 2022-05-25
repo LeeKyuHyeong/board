@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.board.mapper.UserMapper">
+	<select id="selectUserInfo" resultType="UserVO"> 
+		SELECT	A.user_id,
+				A.user_loginid,
+				A.user_loginpwd,
+				A.user_name,
+				A.user_email,
+				A.user_phone,
+				A.user_addr,
+				A.user_gameid,
+				A.user_type,				
+				A.USE_YN
+		FROM	KH_USER A
+		  AND 	A.user_id = #{userId}
+	  	<if test="password != null and password != '' ">
+           	AND	A.user_loginpwd=#{password}
+        </if> 
+	</select>
+	
+	<select id="selectUserList" resultType="map">
+		SELECT * FROM USERS
+	</select>
+</mapper>
+

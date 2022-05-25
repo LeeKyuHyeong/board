@@ -113,6 +113,19 @@ body.active {
     transition-delay: 0.25s;
 }
 
+.formBx .alert_form {
+    position: absolute;
+    top: 20px;
+    font-size: 16px;
+    width: 300px;
+    text-align: center;
+    line-height: 60px;
+    min-height: 60px;
+    border-radius: 5px;
+    color:#940816;
+    background: #fff;
+}
+
 .formBx .form form {
     width: 100%;
     display: flex;
@@ -135,8 +148,14 @@ body.active {
     border: 1px solid #333;
     border-radius: 4px;
 }
+label {
+    color: red;
+}
+
 input[name=alert_login_email] {
     display: none;
+    margin: 0;
+    padding: 0;
     min-height: 5px;
     border : 0;    
 }

@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/team.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="css/team.css">
     <title>Document</title>
 </head>
-<script type="text/javascript" src="../../static/js/team.js"></script>
+<script type="text/javascript" src="js/team.js"></script>
 <body>
     <div class="wrap">
-        <h2>5월 26일 프로야구</h2>
-        <div class="info_box">
-            <h4>대구 라이온즈 파크</h4>
+        <h2 th:text="${nowmonth}+@{월}+${nowday}+@{일 프로야구}"></h2>
+        
+        <div class="info_box" th:each="team : ${teamInfo}">
+            <h4 th:text="${team.home_stad}"></h4>
             <div class="game_info">
                 <div class="home">
-                    <p>삼성</p>
-                    <p class="img_player"><img src="../../static/img/player/뷰캐넌.jpg" alt="사진"></p>
-                    <p>뷰캐넌</p>
-                    <p>방어율 <span>: <b>2.07</b></span></p>
-                    <p>최근 <span>: 3L</span></p>
-                </div>
+                    <p th:text="${team.game_home}"></p>
+                    <!-- <p class="img_player"><img src = "#" alt="사진"></p> -->
+                    <p class="img_player"><img th:src="@{/img/player/}+${team.home_sp}+@{.jpg}"></p>
+                    <p th:text="${team.home_sp}"></p>
+                    <p>방어율 : <span th:text="${team.home_sp_era}"> <b></b></span></p>
+                    <p>최근 : <span th:text="${team.home_win_lose}"> </span></p>
+                </div>                
                 <div class="away">
-                    <p>기아</p>
+                    <p th:text="${team.game_away}"></p>
+                    <p class="img_player"><img th:src="@{/img/player/}+${team.away_sp}+@{.jpg}"></p>
+                    <p th:text="${team.away_sp}"></p>
+                    <p>방어율 : <span th:text="${team.away_sp_era}"> <b></b></span></p>
+                    <p>최근 : <span th:text="${team.away_win_lose}"> </span></p>                    
                 </div>
             </div>
-            <p class="final_score">이전 경기 : <span>0-0</span></p>
+            <p class="final_score">이전 경기 : <span th:text="${team.latest_score}"></span></p>
+
         </div>
-        <div class="info_box">2</div>
-        <div class="info_box">3</div>
-        <div class="info_box">4</div>
-        <div class="info_box">5</div>
     </div>
 </body>
 </html>

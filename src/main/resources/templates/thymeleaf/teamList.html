@@ -10,7 +10,7 @@
 <script type="text/javascript" src="js/team.js"></script>
 <body>
     <div class="wrap">
-        <h2 th:text="${nowmonth}+@{월}+${nowday}+@{일 프로야구}"></h2>
+        <h2 th:text="${nowmonth}+@{월&nbsp;}+${nowday}+@{일 프로야구}"></h2>
         
         <div class="info_box" th:each="team : ${teamInfo}">
             <h4 th:text="${team.home_stad}"></h4>

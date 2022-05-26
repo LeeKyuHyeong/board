@@ -8,10 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.board.service.UserService;
-import com.board.util.SHA512Hash;
-import com.board.vo.UserVO;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,7 +23,7 @@ public class UserController {
     // @Autowired
     // UserService userService;
     @Resource(name ="userService")
-    UserService userService;
+    
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
@@ -53,16 +49,16 @@ public class UserController {
             param.put("userLoginPwd", loginPwd);
             log.info(param.get("userLoginPwd").toString());
 
-            UserVO userInfo = userService.selectUserInfo(param);
+            
 
-            log.info(userInfo.toString());
+            // log.info(userInfo.toString());
             // if (userInfo != null && !userInfo.equals("")) {
             //     setUserSession(request, response, userInfo, session);
             // }
-
-            if (userInfo != null && !userInfo.equals("")) {
-                model.addAttribute("userName", userInfo.getUserName());                                
-            }
+            
+            // if (userInfo != null && !userInfo.equals("")) {
+            //     model.addAttribute("userName", userInfo.getUserName());                                
+            // }
 
 
         } catch (Exception e) {

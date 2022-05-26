@@ -1,5 +1,19 @@
 $(function () {
 
+  const signinBtn = $('.signinBtn');
+  const signupBtn = $('.signupBtn');
+  const formBx = $('.formBx');
+  const body = $('body');
+  
+  signupBtn.click(() => {
+      formBx.addClass('active');
+      body.addClass('active');
+  })
+  signinBtn.click(() => {
+      formBx.removeClass('active');
+      body.removeClass('active');
+  })
+
   $(".btn_login").click(() => {
     chkLoginForm();
 

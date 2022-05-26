@@ -13,7 +13,7 @@ import lombok.Getter;
 @Getter
 @Builder
 @AllArgsConstructor
-@Entity(name="game")
+@Entity(name = "game")
 public class TeamEntity {
 
     @Id
@@ -22,31 +22,31 @@ public class TeamEntity {
 
     @Column(nullable = false)
     private String game_dt;
-    
+
     @Column(nullable = false, length = 45)
     private String game_home;
-    
+
     @Column(nullable = true, length = 3)
     private String home_win_lose;
-    
+
     @Column(nullable = false, length = 45)
     private String home_sp;
-    
+
     @Column(nullable = true, length = 10)
     private String home_sp_era;
-    
+
     @Column(nullable = false, length = 45)
     private String game_away;
-    
+
     @Column(nullable = true, length = 3)
     private String away_win_lose;
-    
+
     @Column(nullable = false, length = 45)
     private String away_sp;
-    
+
     @Column(nullable = true, length = 10)
     private String away_sp_era;
-    
+
     @Column(nullable = false, length = 45)
     private String latest_score;
 
@@ -54,6 +54,6 @@ public class TeamEntity {
     private String home_stad;
 
     public TeamEntity() {
-        
+
     }
 }

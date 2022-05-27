@@ -24,11 +24,11 @@ public class TeamController {
 
     private final TeamRepository teamRepository;
 
-    @RequestMapping("/templates/thymeleaf/teamList")
-    public String teamList() {
+    // @RequestMapping("/templates/thymeleaf/teamList")
+    // public String teamList() {
 
-        return "thymeleaf/teamList";
-    }
+    //     return "thymeleaf/teamList";
+    // }
     @RequestMapping(value = "viewteamList")
     public String findAllMember(Model model) {
         List<TeamEntity> map = new ArrayList<TeamEntity>();        
@@ -44,7 +44,7 @@ public class TeamController {
         
         model.addAttribute("teamInfo", map);
         
-        return "thymeleaf/teamList";
+        return "teamList";
     }
     
 }

@@ -188,6 +188,7 @@ input[name=alert_login_email] {
 .btn_login:hover {
     transition: .5s;
     transform: translateX(20px);    
+    box-shadow: 0 0 35px #03a9f4;
 }
 /* .formBx .form form input[type='submit']:hover {
     transition: .5s;

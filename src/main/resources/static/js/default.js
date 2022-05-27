@@ -18,21 +18,27 @@ $(function () {
     chkLoginForm();
 
     console.log("form value : " + $(".form_login").serialize());
+    const loginId = $('input[name=login_id').val();
+    // $.ajax({
+    //   url: "/login",
+    //   type:"POST",
+    //   data: $(".form_login").serialize(),
+    //   //dataType: "json",
+    //   async: "true",
+    //   success: function (data) {
+    //     if(data == 'success') {
+    //       location.href = '/main?loginId=' + loginId;
+    //     } else {
+    //       $('.alert_form').html('로그인 정보가 맞지 않습니다.');
+    //     }
+    //   },
+    //   error: function (error) {
+    //     console.log("error: " + error);
+    //   }
+    //});
 
-    $.ajax({
-      url: "/login",
-      type:"POST",
-      data: $(".form_login").serialize(),
-      //dataType: "json",
-      async: "false",
-      success: function (data) {
-          $('.alert_form').html(data.userName);
-          //location.href="index2.html";
-      },
-      error: function (error) {
-        console.log(error);
-      },
-    });
+    // $(".form_login")
+
   })
 
   function chkLoginForm() {
@@ -59,7 +65,7 @@ $(function () {
       alert_id.html("아이디를 입력해주세요");
       id.focus();
       //$(".alert_form").html("로그인정보가 일치하지 않습니다.");
-      $(".alert_form").css({ background: "rgb(255, 221, 221)" });
+      //$(".alert_form").css({ background: "rgb(255, 221, 221)" });
       return;
     } else {
       id.css({ border: "1px solid #000" });

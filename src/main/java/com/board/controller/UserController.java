@@ -43,8 +43,7 @@ public class UserController {
         if(findUser != null && findUser.getUser_loginpwd().equals(pwd)) {
             model.addAttribute("user", findUser);
             return "forward:viewteamList";
-        } else {
-            model.addAttribute("alert", "입력한 정보가 맞지 않습니다.");
+        } else {            
             return "redirect:/";
         }
 

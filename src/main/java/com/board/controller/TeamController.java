@@ -38,8 +38,7 @@ public class TeamController {
 
     @RequestMapping(value = "viewteamList")
     public String findAllMember(@ModelAttribute("user") UserEntity user, Model model) {
-        if(user.getUser_id() == 0) {
-            model.addAttribute("alert", "로그인이 필요한 서비스입니다.");
+        if(user.getUser_id() == 0) {            
             return "redirect:/";
         }
         List<TeamEntity> map = new ArrayList<TeamEntity>();

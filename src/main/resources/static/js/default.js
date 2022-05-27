@@ -38,7 +38,8 @@ $(function () {
     //});
 
     // $(".form_login")
-
+    $(".form_login").attr("action","/login");
+    $(".form_login").submit();
   })
 
   function chkLoginForm() {

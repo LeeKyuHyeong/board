@@ -1,37 +1,48 @@
 package com.board.controller;
 
 
+import java.lang.ProcessBuilder.Redirect;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.board.entity.TeamEntity;
+import com.board.entity.UserEntity;
 import com.board.repo.TeamRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
+@SessionAttributes("user")
 public class TeamController {
     
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     private final TeamRepository teamRepository;
 
-    // @RequestMapping("/templates/thymeleaf/teamList")
-    // public String teamList() {
+    @ModelAttribute("user")
+    public UserEntity setUser() {
+        return new UserEntity();        
+    }
 
-    //     return "thymeleaf/teamList";
-    // }
     @RequestMapping(value = "viewteamList")
-    public String findAllMember(Model model) {
-        List<TeamEntity> map = new ArrayList<TeamEntity>();        
+    public String findAllMember(@ModelAttribute("user") UserEntity user, Model model) {
+        if(user.getUser_id() == 0) {
+            model.addAttribute("alert", "로그인이 필요한 서비스입니다.");
+            return "redirect:/";
+        }
+        List<TeamEntity> map = new ArrayList<TeamEntity>();
                 
         String nowstr = String.valueOf(LocalDate.now());
         String nowmonth = String.valueOf(LocalDate.now().getMonthValue());

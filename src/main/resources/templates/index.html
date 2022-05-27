@@ -23,9 +23,11 @@
             </div>
         </div>
         <div class="formBx">
-            <h2 class="alert_form"></h2>
+            <box th:if="${alert != null}">
+                <h2 th:text="${alert}" class="alert_form"></h2>
+            </box>
             <div class="form signinForm">
-                <form class="form_login" method="post" action="/login">
+                <form class="form_login">
                     <h3>Login</h3>
                     <!-- <label for="login_email" class="alert_login_email"></label>
                     <input type="email" placeholder="Email" name="login_email"> -->

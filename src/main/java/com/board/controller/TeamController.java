@@ -1,6 +1,5 @@
 package com.board.controller;
 
-
 import java.lang.ProcessBuilder.Redirect;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,35 +25,35 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @SessionAttributes("user")
 public class TeamController {
-    
+
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     private final TeamRepository teamRepository;
 
     @ModelAttribute("user")
     public UserEntity setUser() {
-        return new UserEntity();        
+        return new UserEntity();
     }
 
     @RequestMapping(value = "viewteamList")
     public String findAllMember(@ModelAttribute("user") UserEntity user, Model model) {
-        if(user.getUser_id() == 0) {            
+        if (user.getUser_id() == 0) {
             return "redirect:/";
         }
         List<TeamEntity> map = new ArrayList<TeamEntity>();
-                
+
         String nowstr = String.valueOf(LocalDate.now());
         String nowmonth = String.valueOf(LocalDate.now().getMonthValue());
         String nowday = String.valueOf(LocalDate.now().getDayOfMonth());
 
         model.addAttribute("nowmonth", nowmonth);
         model.addAttribute("nowday", nowday);
-        
-        map = teamRepository.findByGameDate(nowstr);        
-        
+
+        map = teamRepository.findByGameDate(nowstr);
+
         model.addAttribute("teamInfo", map);
-        
+
         return "teamList";
     }
-    
+
 }

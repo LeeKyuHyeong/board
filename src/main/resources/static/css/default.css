@@ -20,6 +20,16 @@ body.active {
     background: linear-gradient(#fff, #f43648);
 }
 
+body.active .container {
+    width: 1200px;
+    height: 650px;
+    transition: .5s;
+}
+
+body.active .container .blueBg{
+    height: 540px;
+}
+
 .container {
     position: relative;
     width: 800px;

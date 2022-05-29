@@ -15,7 +15,34 @@ $(function () {
   })
 
   $(".btn_login").click(() => {
-    chkLoginForm();
+    const id = $("input[name=login_id]");
+    const alert_id = $(".alert_login_id");
+    const pwd = $("input[name=login_pwd]");
+    const alert_pwd = $(".alert_login_pwd");
+
+    if (id.val() == "" || id.val() == undefined) {
+      id.css({ border: "1px solid red" });
+      alert_id.html("아이디를 입력해주세요");
+      id.focus();
+      //$(".alert_form").html("로그인정보가 일치하지 않습니다.");
+      //$(".alert_form").css({ background: "rgb(255, 221, 221)" });
+      return;
+    } else {
+      id.css({ border: "1px solid #000" });
+      alert_id.html("");
+      //return true;
+    }
+    
+    if (pwd.val() == "" || pwd.val() == undefined) {
+      pwd.css({ border: "1px solid red" });
+      alert_pwd.html("비밀번호를 입력해주세요");
+      pwd.focus();
+      return;
+    } else {
+      pwd.css({ border: "1px solid #000" });
+      alert_pwd.html("");
+      //return true;
+    }
 
     console.log("form value : " + $(".form_login").serialize());
     const loginId = $('input[name=login_id').val();
@@ -44,11 +71,9 @@ $(function () {
 
   function chkLoginForm() {
     const email = $("input[name=login_email]");
-    const id = $("input[name=login_id]");
-    const pwd = $("input[name=login_pwd]");
+    
     const alert_mail = $(".alert_login_email");
-    const alert_pwd = $(".alert_login_pwd");
-    const alert_id = $(".alert_login_id");
+    
 
     // if (email.val() == "" || email.val() == undefined) {
     //   email.css({ border: "1px solid red" });
@@ -61,26 +86,7 @@ $(function () {
     //   email.css({ border: "1px solid #000" });
     //   alert_mail.html("");
     // }
-    if (id.val() == "" || id.val() == undefined) {
-      id.css({ border: "1px solid red" });
-      alert_id.html("아이디를 입력해주세요");
-      id.focus();
-      //$(".alert_form").html("로그인정보가 일치하지 않습니다.");
-      //$(".alert_form").css({ background: "rgb(255, 221, 221)" });
-      return;
-    } else {
-      id.css({ border: "1px solid #000" });
-      alert_id.html("");
-    }
-    if (pwd.val() == "" || pwd.val() == undefined) {
-      pwd.css({ border: "1px solid red" });
-      alert_pwd.html("비밀번호를 입력해주세요");
-      pwd.focus();
-      return;
-    } else {
-      pwd.css({ border: "1px solid #000" });
-      alert_pwd.html("");
-    }
+    
   }
   function chkJoinForm() {
     const name = $("input[name=join_name]");

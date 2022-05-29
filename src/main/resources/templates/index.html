@@ -45,8 +45,11 @@
                 <form class="form_join">
                     <h3>Sign Up</h3>
 
-                    <div><input type="text" placeholder="login Id" name="user_loginid">
-                    <button id="btn_idchk">idChk</button></div>
+                    <div>
+                        <label for="user_loginid" class="alert_join_id"></label>
+                        <input type="text" placeholder="login Id" name="user_loginid">
+                        <button id="btn_idchk">idChk</button>
+                    </div>
                     <input type="password" placeholder="Password" name="user_loginpwd">
                     <input type="password" placeholder="Password Check" name="user_loginpwd2">
                     <input type="text" placeholder="Username" name="user_name">
@@ -57,7 +60,7 @@
 
 
                     <!-- <input type="submit" value="join"> -->
-                    <button type="submit" class="btn_join">Join</button>
+                    <button type="button" class="btn_join">Join</button>
                     <!-- <a href="viewteamList">오늘의 경기</a> -->
                 </form>
             </div>

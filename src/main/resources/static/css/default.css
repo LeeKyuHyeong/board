@@ -12,12 +12,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#fff,#03a9f4);
+    background: linear-gradient(#fff, #03a9f4);
     transition: 0.5s;
 }
 
 body.active {
-    background: linear-gradient(#fff,#f43648);    
+    background: linear-gradient(#fff, #f43648);
 }
 
 .container {
@@ -91,7 +91,7 @@ body.active {
     left: 0;
     width: 100%;
     padding: 50px;
-    transition: 0.5s;    
+    transition: 0.5s;
 }
 
 .formBx .signinForm {
@@ -122,14 +122,14 @@ body.active {
     line-height: 60px;
     min-height: 60px;
     border-radius: 5px;
-    color:#940816;
+    color: #940816;
     background: #fff;
 }
 
 .formBx .form form {
     width: 100%;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .formBx .form form h3 {
@@ -139,7 +139,7 @@ body.active {
     font-weight: 500;
 }
 
-.formBx .form form input {
+.formBx .form .form_login input {
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
@@ -148,6 +148,29 @@ body.active {
     border: 1px solid #333;
     border-radius: 4px;
 }
+
+.formBx .form .form_join input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.formBx .form .form_join input[name=user_loginid] {
+    width: 80%;
+}
+
+/* #btn_idchk {
+    width: 65px;
+    height: 20px;
+    position: relative;
+    top: -47px;
+    left: 85%;
+} */
+
 label {
     color: red;
 }
@@ -157,8 +180,9 @@ input[name=alert_login_email] {
     margin: 0;
     padding: 0;
     min-height: 5px;
-    border : 0;    
+    border: 0;
 }
+
 /* .formBx .form form input[type='submit'] {
     background: #03a9f4;
     border: none;
@@ -175,7 +199,8 @@ input[name=alert_login_email] {
     min-height: 40px;
     cursor: pointer;
     border-radius: 5px;
-} 
+}
+
 /* .btn_login {
     background: #03a9f4;
     border: none;
@@ -187,9 +212,16 @@ input[name=alert_login_email] {
 } */
 .btn_login:hover {
     transition: .5s;
-    transform: translateX(20px);    
+    transform: translateX(20px);
     box-shadow: 0 0 35px #03a9f4;
 }
+
+.btn_join:hover {
+    transition: .5s;
+    transform: translateX(20px);
+    box-shadow: 0 0 35px #940816;
+}
+
 /* .formBx .form form input[type='submit']:hover {
     transition: .5s;
     transform: translateX(20px);    
@@ -198,6 +230,7 @@ input[name=alert_login_email] {
     background: #f43648;
     border-radius: 5px;
 }
+
 /* .formBx.active .signupForm input[type='submit'] {
     background: #f43648;
     border-radius: 5px;
@@ -215,18 +248,21 @@ input[name=alert_login_email] {
         height: 650px;
         display: flex;
         justify-content: center;
-        align-items: center;        
+        align-items: center;
     }
+
     .container .blueBg {
         top: 0;
         height: 100%;
     }
+
     .formBx {
         width: 100%;
         height: 500px;
         top: 0;
         box-shadow: none;
     }
+
     .blueBg .box {
         position: absolute;
         width: 100%;
@@ -234,16 +270,19 @@ input[name=alert_login_email] {
         bottom: 0;
         box-shadow: none;
     }
+
     .box.signin {
-        top: 0;        
+        top: 0;
     }
+
     .box.signin h2 {
         color: #000;
     }
+
     .formBx.active {
         left: 0;
         top: 150px;
     }
-    
+
 
 }

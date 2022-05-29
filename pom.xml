@@ -67,7 +67,8 @@
 			<version>1.18.16</version>
 			<scope>provided</scope>
 		</dependency>
-
+		<!-- 스프링 Security-->
+		
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>

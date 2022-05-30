@@ -54,6 +54,7 @@ public class TeamController {
         model.addAttribute("teamInfo", map);
 
         return "teamList";
+        // return "templates/teamList";
     }
 
 }

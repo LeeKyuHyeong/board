@@ -14,6 +14,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long>{
     @Query(value = "select u from kh_user u where u.user_loginid = ?1")
     public UserEntity findByUserId(String userid);
 
-    
+    @Query(value = "select max(u.user_id) from kh_user u where 1=1")
+    public int findNextId();
     
 }

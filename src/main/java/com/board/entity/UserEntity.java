@@ -56,7 +56,7 @@ public class UserEntity {
     @Column(nullable = true)
     private String update_dt;
 
-    @Column(nullable = false, length = 1)
+    @Column(nullable = true, length = 1)
     private String use_yn;
 
     public UserEntity() {

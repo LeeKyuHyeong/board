@@ -169,10 +169,6 @@ body.active .container .blueBg{
     border-radius: 3px;
 }
 
-.formBx .form .form_join input[name=user_loginid] {
-    width: 80%;
-}
-
 /* #btn_idchk {
     width: 65px;
     height: 20px;

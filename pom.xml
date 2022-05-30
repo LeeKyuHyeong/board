@@ -68,7 +68,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- 스프링 Security-->
-		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -84,7 +87,7 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.5.3</version>
+			<version>3.5.10</version>
 		</dependency>
 
 		<dependency>

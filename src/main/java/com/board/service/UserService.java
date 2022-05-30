@@ -12,13 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class LoginService {
+public class UserService {
 
     @Autowired
     private final UserRepository userRepository;
 
     public boolean login(UserEntity user) {
-
+        
         UserEntity findUser = userRepository.findByUserId(user.getUser_loginid());
 
         if(findUser == null){
@@ -34,6 +34,18 @@ public class LoginService {
     public UserEntity getUser(String id, String pwd) {
 
         return userRepository.findByIdAndPassword(id, pwd);
+    }
+
+    public UserEntity getUser(String id) {
+        return userRepository.findByUserId(id);
+    }
+
+    public int findNextId() {
+        return userRepository.findNextId();
+    }
+
+    public UserEntity save(UserEntity user) {
+        return userRepository.save(user);
     }
 
 }

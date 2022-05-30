@@ -14,6 +14,7 @@ $(function () {
       body.removeClass('active');
   })
 
+  // 로그인 버튼 클릭시
   $(".btn_login").click(() => {
     const id = $("input[name=login_id]");
     const alert_id = $(".alert_login_id");
@@ -24,7 +25,6 @@ $(function () {
       id.css({ border: "1px solid red" });
       alert_id.html("아이디를 입력해주세요");
       id.focus();
-      
       return;
     } else {
       id.css({ border: "1px solid #000" });
@@ -45,6 +45,7 @@ $(function () {
     $(".form_login").submit();
   })
 
+  //회원가입 버튼 클릭시
   $(".btn_join").click(() => {
     
     const id = $("input[name=user_loginid]");
@@ -72,7 +73,18 @@ $(function () {
       alert_pwd.html("");
     }
 
-    console.log("클릭");
-    console.log("form value : " + $(".form_join").serialize());
+    $(".form_join").attr("action","/join");
+    $(".form_join").submit();
   })
+
+  //휴대전화 입력 란 자동 - 추가
+  //$('.userphone').blur(() => {
+  $('.userphone').keyup(() => {
+    //console.log('key event : ' + $(this).val());
+    console.log('key event : ' + $('.userphone').val());
+    //$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") ); 
+    $('.userphone').val( $('.userphone').val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") ); 
+  })
+
+
 });

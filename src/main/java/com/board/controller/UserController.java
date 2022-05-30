@@ -45,51 +45,5 @@ public class UserController {
         } else {
             return "redirect:/";
         }
-
-        // if(!loginService.login(userEntity)) {
-        // return "login";
-        // }
-
-        // sessionManager.createSession(userEntity, response);
-
-        // return "redirect:/";
     }
-
-    // @PostMapping(value = "/login")
-    // public String login(
-    // @RequestParam(value = "login_id", required = true) String loginId,
-    // @RequestParam(value = "login_pwd", required = true) String loginPwd,
-    // Model model,
-    // HttpServletRequest request,
-    // HttpServletResponse response,
-    // HttpSession session) throws Exception {
-
-    // String msg = "";
-
-    // try {
-    // log.info("loginId : " + loginId);
-    // log.info("loginPwd : " + loginPwd);
-
-    // // 패스워드 암호화 SHA512Hash.getDigest("1234")
-    // // param.put("password", SHA512Hash.getDigest(loginPwd));
-
-    // int cnt = userRepository.findByIdAndPassword(loginId, loginPwd);
-    // log.info(String.valueOf(cnt));
-
-    // if(cnt > 0) {
-    // model.addAttribute("msg", "success");
-    // msg = "success";
-    // } else {
-    // model.addAttribute("msg", "failed");
-    // msg = "failed";
-    // }
-
-    // } catch (Exception e) {
-    // e.printStackTrace();
-    // }
-    // log.info(msg);
-    // return msg;
-    // // return "thymeleaf/main2";
-    // }
-
 }

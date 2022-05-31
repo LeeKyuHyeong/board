@@ -61,7 +61,7 @@ public class UserController {
         UserEntity findUser = userService.getUser(id);
         
         if(findUser == null) return "OK";
-        else return "DUPLE";            
+        else return "DUPLE";
     }
     
     @PostMapping(value="/join")

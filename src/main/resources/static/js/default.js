@@ -42,7 +42,7 @@ $(function () {
       alert_pwd.html("");
     }
 
-    $(".form_login").attr("action","/user/login");
+    $(".form_login").attr("action","/login");
     $(".form_login").submit();
   })
 

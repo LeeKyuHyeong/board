@@ -1,19 +1,19 @@
 $(function () {
-  console.log('msg : ' + $('input[name=msg').val());
+  console.log("msg : " + $("input[name=msg").val());
 
-  const signinBtn = $('.signinBtn');
-  const signupBtn = $('.signupBtn');
-  const formBx = $('.formBx');
-  const body = $('body');
+  const signinBtn = $(".signinBtn");
+  const signupBtn = $(".signupBtn");
+  const formBx = $(".formBx");
+  const body = $("body");
 
   signupBtn.click(() => {
-    formBx.addClass('active');
-    body.addClass('active');
-  })
+    formBx.addClass("active");
+    body.addClass("active");
+  });
   signinBtn.click(() => {
-    formBx.removeClass('active');
-    body.removeClass('active');
-  })
+    formBx.removeClass("active");
+    body.removeClass("active");
+  });
 
   // 로그인 버튼 클릭시
   $(".btn_login").click(() => {
@@ -44,11 +44,10 @@ $(function () {
 
     $(".form_login").attr("action", "/login");
     $(".form_login").submit();
-  })
+  });
 
   //회원가입 버튼 클릭시
   $(".btn_join").click(() => {
-
     const id = $("input[name=user_loginid]");
     const alert_id = $(".alert_join_id");
     const pwd = $("input[name=user_loginpwd]");
@@ -63,7 +62,6 @@ $(function () {
     const alert_phone = $(".alert_join_phone");
     const addr = $("input[name=user_addr]");
     const alert_addr = $(".alert_join_addr");
-
 
     //입력id null 체크
     if (id.val() == "" || id.val() == undefined) {
@@ -88,20 +86,20 @@ $(function () {
         async: false,
         dataType: "text",
         success: function (rs) {
-          if (rs == 'OK') {
+          if (rs == "OK") {
             id.css({ border: "3px solid green" });
             alert_id.html("사용가능한 아이디입니다.");
-            alert_id.css({ color: "green" })
+            alert_id.css({ color: "green" });
           } else {
             id.css({ border: "1px solid red" });
             alert_id.html("이미 존재하는 아이디입니다.");
-            alert_id.css({ color: "red" })
+            alert_id.css({ color: "red" });
           }
         },
         error: function (error) {
-          alert('error : ' + error);
-        }
-      })
+          alert("error : " + error);
+        },
+      });
     }
 
     // 입력 비밀번호 null체크
@@ -161,15 +159,12 @@ $(function () {
 
     $(".form_join").attr("action", "/join");
     $(".form_join").submit();
-  })
-
+  });
 
   //휴대전화 입력 란 자동 - 추가
-  $('.userphone').keyup(() => {
-    console.log('key event : ' + $('.userphone').val());
-    //$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") ); 
-    $('.userphone').val($('.userphone').val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/, "$1-$2-$3").replace("--", "-"));
-  })
-
-
+  $(".userphone").keyup(() => {
+    console.log("key event : " + $(".userphone").val());
+    //$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") );
+    $(".userphone").val($(".userphone").val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-"));
+  });
 });

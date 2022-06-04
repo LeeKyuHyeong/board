@@ -55,8 +55,8 @@ $(function () {
     const alert_pwd = $(".alert_join_pwd");
     const pwd2 = $("input[name=user_loginpwd2]");
     const alert_pwd2 = $(".alert_join_pwd2");
-    const name = $("input[name=user_name]");
-    const alert_name = $(".alert_join_name");
+    // const name = $("input[name=user_name]");
+    // const alert_name = $(".alert_join_name");
     const email = $("input[name=user_email]");
     const alert_email = $(".alert_join_email");
     const phone = $("input[name=user_phone]");

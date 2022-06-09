@@ -18,12 +18,13 @@ body {
 
 body.active {
     background: linear-gradient(#fff, #f43648);
+    transition: 0.5s;
 }
 
 body.active .container {
     width: 1200px;
     height: 650px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 body.active .container .blueBg{

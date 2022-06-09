@@ -13,7 +13,7 @@ import lombok.Getter;
 @Getter
 @Builder
 @AllArgsConstructor
-@Entity(name = "game")
+@Entity(name = "kh_game_info")
 public class TeamEntity {
 
     @Id

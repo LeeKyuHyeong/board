@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/default.css" type="text/css">
-    <script type="text/javascript" src="js/default.js" ></script>
+    <script type="text/javascript" src="js/default.js"></script>
 </head>
+
 <body>
-<input type="hidden" value="${msg}" name="msg">
+    <input type="hidden" value="${msg}" name="msg">
     <div class="container">
         <div class="blueBg">
             <div class="box signin">
@@ -41,20 +43,20 @@
                     <!-- <input type="submit" value="Login" class="btn_login"> -->
                     <button type="button" class="btn_login"><i>로그인</i></button>
                     <!-- <a href="main.html" class="forgot" >Forgot Password?</a> -->
-                    <a href="main.html" class="forgot" >비밀번호를 잊어버리셨나요?</a>
+                    <a href="main.html" class="forgot">비밀번호를 잊어버리셨나요?</a>
                 </form>
             </div>
 
             <div class="form signupForm">
                 <form class="form_join" method="POST">
                     <h3>회원가입</h3>
-                    
+
                     <label for="user_loginid" class="alert_join_id"></label>
-                    <input type="text" placeholder="login Id" name="user_loginid" required>                        
-                    
+                    <input type="text" placeholder="login Id" name="user_loginid" required>
+
                     <label for="user_loginpwd" class="alert_join_pwd"></label>
                     <input type="password" placeholder="Password" name="user_loginpwd" required>
-                    
+
                     <label for="user_loginpwd2" class="alert_join_pwd2"></label>
                     <input type="password" placeholder="Password Check" name="user_loginpwd2" required>
 
@@ -74,14 +76,12 @@
 
                     <!-- <input type="submit" value="join"> -->
                     <button type="button" class="btn_join">회원가입</button>
-                    
+
                 </form>
             </div>
         </div>
     </div>
 
 </body>
+
 </html>
-
-
-

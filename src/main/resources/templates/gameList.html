@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/gameList.css">
     <title>Document</title>
 </head>
-<script type="text/javascript" src="js/team.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
 <body>
     <div class="wrap">
         <h2 th:text="${nowmonth}+@{월&nbsp;}+${nowday}+@{일 프로야구}"></h2>
         
-        <div class="info_box" th:each="team : ${teamInfo}">
+        <div class="info_box" th:each="team : ${gameInfo}">
             <h4 th:text="${team.home_stad}"></h4>
             <div class="game_info">
                 <div class="home">
-                    <p th:text="${team.game_home}"></p>
-                    <!-- <p class="img_player"><img src = "#" alt="사진"></p> -->
+                    <p th:text="${team.game_home}"></p>                    
                     <p class="img_player"><img th:src="@{/img/player/}+${team.home_sp}+@{.jpg}"></p>
                     <p th:text="${team.home_sp}"></p>
                     <p>방어율 : <span th:text="${team.home_sp_era}"> <b></b></span></p>

@@ -13,8 +13,8 @@ import lombok.Getter;
 @Getter
 @Builder
 @AllArgsConstructor
-@Entity(name = "game")
-public class TeamEntity {
+@Entity(name = "kh_game_info")
+public class GameEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,8 +52,8 @@ public class TeamEntity {
 
     @Column(nullable = false, length = 255)
     private String home_stad;
-
-    public TeamEntity() {
+    
+    public GameEntity() {
 
     }
 }

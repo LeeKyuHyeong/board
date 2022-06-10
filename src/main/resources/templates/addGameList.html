@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/game.css">
+  <title>Document</title>
+</head>
+<script type="text/javascript" src="js/game.js"></script>
+
+<body>
+  <div id="gameform">
+    <form class="game_form">
+      <legend> 오늘의 경기 입력 </legend>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="gameHome">홈팀</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="gameHome" value="">
+            </td>
+            <td>
+              <label for="gameAway">원정팀</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="gameAway" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="homeWinLose">홈팀 연승</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="homeWinLose" value="">
+            </td>
+            <td>
+              <label for="awayWinLose">원정팀 연승</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="awayWinLose" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="homeSp">홈팀 선발</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="homeSp" value="">
+            </td>
+            <td>
+              <label for="awaySp">원정팀 선발</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="awaySp" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="homeSpEra">홈 팀 선발 방어율</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="homeSpEra" value="">
+            </td>
+            <td>
+              <label for="awaySpEra">원정 팀 선발 방어율</label>
+            </td>
+            <td>
+              <input class="input_game" type="text" name="awaySpEra" value="">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="div_btn">
+        <button id="btn_save" type="button">저장</button>
+        <button id="btn_reset" type="reset">초기화</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#e5eee6, #0b0c0c);
+}
+
+.wrap {
+    width: 90%;
+    min-height: 80vh;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap h2 {
+    color: black;
+    position: absolute;
+    top: 7vh;
+}
+
+.wrap .info_box {
+    margin: 3px;
+    width: 24%;
+    height: 500px;
+    background: rgb(234, 255, 245);
+    border-radius: 10px;
+}
+
+.wrap .info_box h4 {
+    color: blue;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.wrap .info_box .game_info {
+    margin: 10px auto;
+    position: relative;
+    width: 95%;
+    height: 350px;
+    background: #78a;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 2s;
+}
+
+.wrap .info_box .game_info div {
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+    transition: 1s;
+}
+
+.info_box div p {
+    margin-top: 6px;
+    color: #fff;
+}
+
+.img_player img {
+    width: 80px;
+    height: 140px;
+}
+
+.final_score {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        width: 100%;
+        flex-flow: wrap;
+        margin-top: 13vh;
+        justify-content: space-evenly;
+    }
+
+    .wrap .info_box {
+        width: 40%;
+    }
+
+    .wrap h2 {
+        top: 3vh;
+    }
+
+}

@@ -27,7 +27,7 @@ public class GameController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    private final GameRepository teamRepository;
+    private final GameRepository gameRepository;
 
     @ModelAttribute("user")
     public UserEntity setUser() {
@@ -40,9 +40,15 @@ public class GameController {
         return "addGameList";
     }
     @PostMapping("/addGameList.do")
-    public String addGameList() {
+    public String addGameList(GameEntity gameEntity, Model model) {
 
+        GameEntity newGame = gameRepository.save(gameEntity);
         
+        if(newGame == null) {
+            model.addAttribute("msg", "failed");
+        } else {
+            model.addAttribute("msg", "success");
+        }
         return "gameList";
     }
     @RequestMapping(value = "viewGameList")
@@ -59,7 +65,7 @@ public class GameController {
         model.addAttribute("nowmonth", nowmonth);
         model.addAttribute("nowday", nowday);
 
-        map = teamRepository.findByGameDate(nowstr);
+        map = gameRepository.findByGameDate(nowstr);
 
         model.addAttribute("gameInfo", map);
 

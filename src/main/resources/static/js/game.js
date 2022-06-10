@@ -19,7 +19,10 @@ $(function() {
 
     if(!chkFormDetail()) return false;
     
-
+    
+    $('.game_form').attr("method", "post");
+    $('.game_form').attr("action", "/addGameList.do");
+    $('.game_form').submit();
   })
 
   const addFormChk = () => {

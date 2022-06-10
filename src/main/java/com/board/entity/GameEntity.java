@@ -52,7 +52,7 @@ public class GameEntity {
 
     @Column(nullable = false, length = 255)
     private String home_stad;
-
+    
     public GameEntity() {
 
     }

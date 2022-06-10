@@ -16,8 +16,7 @@
             <h4 th:text="${team.home_stad}"></h4>
             <div class="game_info">
                 <div class="home">
-                    <p th:text="${team.game_home}"></p>
-                    <!-- <p class="img_player"><img src = "#" alt="사진"></p> -->
+                    <p th:text="${team.game_home}"></p>                    
                     <p class="img_player"><img th:src="@{/img/player/}+${team.home_sp}+@{.jpg}"></p>
                     <p th:text="${team.home_sp}"></p>
                     <p>방어율 : <span th:text="${team.home_sp_era}"> <b></b></span></p>

@@ -35,6 +35,17 @@ public class TeamController {
         return new UserEntity();
     }
 
+    @GetMapping("/addTeamList")
+    public String viewAddTeamList() {
+
+        return "addTeamList";
+    }
+    @PostMapping("/addTeamList.do")
+    public String addTeamList() {
+
+        
+        return "teamList";
+    }
     @RequestMapping(value = "viewteamList")
     public String findAllMember(@ModelAttribute("user") UserEntity user, Model model) {
         if (user.getUser_id() == 0) {

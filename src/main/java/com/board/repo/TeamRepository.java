@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TeamRepository extends JpaRepository<TeamEntity, Long>{
 
-    @Query(value = "select g from game g where g.game_dt = ?1")
+    @Query(value = "select g from kh_game_info g where g.game_dt = ?1")
     public List<TeamEntity> findByGameDate(String nowstr);
 }

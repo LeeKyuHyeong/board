@@ -92,10 +92,10 @@ public class UserController {
         // UserEntity result = userService.save(newUser);
         UserEntity result = userService.save(user);
         if (result == null) {
-            model.addAttribute("msg", "success");
+            model.addAttribute("msg", "failed");
             return "failed";
         } else {
-            model.addAttribute("msg", "failed");
+            model.addAttribute("msg", "OK");
             return "OK";
         }
     }

@@ -53,8 +53,8 @@ public class GameController {
     }
     @RequestMapping(value = "viewGameList")
     public String viewGameList(@ModelAttribute("user") UserEntity user, Model model) {
-        if (user.getUser_id() == 0) {
-            return "redirect:/";
+        if (user.getUser_id() == 0) {            
+        return "redirect:/";
         }
         List<GameEntity> map = new ArrayList<GameEntity>();
 

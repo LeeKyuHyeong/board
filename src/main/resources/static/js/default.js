@@ -156,9 +156,21 @@ $(function () {
       addr.css({ border: "1px solid #000" });
       alert_addr.html("");
     }
-
-    $(".form_join").attr("action", "/join");
-    $(".form_join").submit();
+    
+    $.ajax({
+      url:"/join",
+      dataSet:$(".form_join").serialize(),
+      success : function(data) {
+        if(data == "OK") {
+          alert('회원가입완료.');
+        } else {
+          alert('이미 가입된 회원입니다.');
+        }
+        location.href="/";
+      }
+    })
+    //$(".form_join").attr("action", "/join");
+    //$(".form_join").submit();
   });
 
   //휴대전화 입력 란 자동 - 추가

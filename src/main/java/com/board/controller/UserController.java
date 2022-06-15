@@ -47,7 +47,7 @@ public class UserController {
 
         if (findUser != null && findUser.getUser_loginpwd().equals(pwd)) {
             model.addAttribute("user", findUser);
-            return "forward:viewteamList";
+            return "forward:viewGameList";
         } else {
             model.addAttribute("msg", "failed");
             return "redirect:/";

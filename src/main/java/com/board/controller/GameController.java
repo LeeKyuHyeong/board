@@ -47,6 +47,7 @@ public class GameController {
         if(newGame == null) {
             model.addAttribute("msg", "failed");
         } else {
+            log.info("newGame", newGame);
             model.addAttribute("msg", "success");
         }
         return "gameList";

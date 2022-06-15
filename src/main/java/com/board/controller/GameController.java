@@ -55,16 +55,20 @@ public class GameController {
     @RequestMapping(value = "viewGameList")
     public String viewGameList(@ModelAttribute("user") UserEntity user, Model model) {
         if (user.getUser_id() == 0) {            
-        return "redirect:/";
+            return "redirect:/";
         }
         List<GameEntity> map = new ArrayList<GameEntity>();
 
         String nowstr = String.valueOf(LocalDate.now());
         String nowmonth = String.valueOf(LocalDate.now().getMonthValue());
         String nowday = String.valueOf(LocalDate.now().getDayOfMonth());
+        String nowdayofWeek = String.valueOf(LocalDate.now().getDayOfWeek());
+
+        log.info("오늘의 요일 : " + nowdayofWeek);
 
         model.addAttribute("nowmonth", nowmonth);
         model.addAttribute("nowday", nowday);
+        model.addAttribute("nowdayofWeek", nowdayofWeek);
 
         map = gameRepository.findByGameDate(nowstr);
 

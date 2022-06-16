@@ -79,6 +79,20 @@ body {
     top: 20px;
     text-align: center;
 }
+.wrap .noGame {
+    width: 800px;
+    min-height: 40vh;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noGame p {
+    font-size: xx-large;
+    font-weight: 700;
+}
 
 @media (max-width: 991px) {
     .wrap {
@@ -95,5 +109,13 @@ body {
     .wrap h2 {
         top: 3vh;
     }
-
+    .wrap .noGame {
+        width: 300px;
+        min-height: 60vh;
+        transition: 0.5s;
+    }
+    .noGame p {
+        font-size: large;
+        font-weight: 600;
+    }
 }

@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="css/gameList.css">
     <title>Document</title>
 </head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
 <body>
-    <div class="wrap">
+    <div class="wrap">        
         <h2 th:text="${nowmonth}+@{월&nbsp;}+${nowday}+@{일 프로야구}"></h2>
-        
-        <div class="info_box" th:each="team : ${gameInfo}">
+        <div style="position:absolute; top:5px; right:10px;">right</div>
+        <div th:if="${nowdayofWeek.equals('MONDAY')}">        
+            <div class="noGame">
+                <p>월요일은 경기가 없습니다.</p>
+            </div>
+        </div>      
+        <div th:unless="${nowdayofWeek.equals('MONDAY')}" class="info_box" th:each="team : ${gameInfo}">
             <h4 th:text="${team.home_stad}"></h4>
             <div class="game_info">
                 <div class="home">
@@ -31,7 +38,7 @@
                 </div>
             </div>
             <p class="final_score">이전 경기 : <span th:text="${team.latest_score}"></span></p>
-
+            
         </div>
     </div>
 </body>

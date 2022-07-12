@@ -62,4 +62,13 @@ public class UserEntity {
     public UserEntity() {
 
     }
+
+    @Override
+    public String toString() {
+        return "UserEntity [create_dt=" + create_dt + ", create_loginid=" + create_loginid + ", upate_loginid="
+                + upate_loginid + ", update_dt=" + update_dt + ", use_yn=" + use_yn + ", user_addr=" + user_addr
+                + ", user_email=" + user_email + ", user_gameid=" + user_gameid + ", user_id=" + user_id
+                + ", user_loginid=" + user_loginid + ", user_loginpwd=" + user_loginpwd + ", user_name=" + user_name
+                + ", user_phone=" + user_phone + ", user_type=" + user_type + "]";
+    }
 }

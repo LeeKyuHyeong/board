@@ -41,7 +41,7 @@ public class GameController {
     }
     @PostMapping("/addGameList.do")
     public String addGameList(GameEntity gameEntity, Model model) {
-
+        System.out.println(gameEntity);
         GameEntity newGame = gameRepository.save(gameEntity);
         
         if(newGame == null) {

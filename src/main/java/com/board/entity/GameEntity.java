@@ -56,4 +56,13 @@ public class GameEntity {
     public GameEntity() {
 
     }
+
+    @Override
+    public String toString() {
+        return "GameEntity [away_sp=" + away_sp + ", away_sp_era=" + away_sp_era + ", away_win_lose=" + away_win_lose
+                + ", game_away=" + game_away + ", game_dt=" + game_dt + ", game_home=" + game_home + ", game_idx="
+                + game_idx + ", home_sp=" + home_sp + ", home_sp_era=" + home_sp_era + ", home_stad=" + home_stad
+                + ", home_win_lose=" + home_win_lose + ", latest_score=" + latest_score + "]";
+    }
+    
 }

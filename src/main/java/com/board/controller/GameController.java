@@ -64,7 +64,7 @@ public class GameController {
         String nowday = String.valueOf(LocalDate.now().getDayOfMonth());
         String nowdayofWeek = String.valueOf(LocalDate.now().getDayOfWeek());
 
-        //log.info("오늘의 요일 : " + nowdayofWeek);
+        log.info("오늘의 요일 : " + nowdayofWeek);
 
         model.addAttribute("nowmonth", nowmonth);
         model.addAttribute("nowday", nowday);        
